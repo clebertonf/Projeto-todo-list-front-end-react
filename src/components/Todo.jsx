@@ -1,11 +1,20 @@
+import { useState } from 'react';
+
 function Todo() {
+  const [itens] = useState(['1', '2', '3']);
   return (
     <div>
       <h2>To do APP</h2>
       <div>
-        <input type="checkbox" />
-        <span>Todo</span>
-        <button type="button">Apagar</button>
+
+        {itens.map(((todo) => (
+          <div>
+            <input type="checkbox" />
+            <span>{todo}</span>
+            <button type="button">Apagar</button>
+          </div>
+        )))}
+
       </div>
       <button type="button">Tarefas</button>
       <button type="button">Pendentes</button>
