@@ -1,10 +1,12 @@
+/* eslint-disable react/react-in-jsx-scope */
 import './App.css';
+import Todo from './components/Todo';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Ola mundo!
+        <Todo />
       </header>
     </div>
   );
